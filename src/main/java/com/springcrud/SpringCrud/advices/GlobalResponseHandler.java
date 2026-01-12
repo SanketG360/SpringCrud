@@ -22,6 +22,7 @@ public class GlobalResponseHandler implements ResponseBodyAdvice<Object> {
         if(body instanceof ApiResponse<?>){
             return  body;
         }
+
         return   new ApiResponse<>(body);
     }
 }
